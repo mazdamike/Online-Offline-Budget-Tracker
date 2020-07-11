@@ -1,7 +1,6 @@
 var MongoDB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.connect(MONGODB_URI);
 
-![MongoDB_URI];
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
