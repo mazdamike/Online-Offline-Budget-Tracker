@@ -1,5 +1,5 @@
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
-mongoose.connect(MONGODB_URI);
+// mongoose.connect(MONGODB_URI);
 
 
 const express = require("express");
@@ -23,6 +23,12 @@ app.use(express.static("public"));
 //   useNewUrlParser: true,
 //   useFindAndModify: false
 // });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
+
+
 
 // routes
 app.use(require("./routes/api.js"));
